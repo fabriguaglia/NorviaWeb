@@ -18,6 +18,14 @@ import { GiCook } from "react-icons/gi";
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Función para hacer scroll suave a la sección de servicios
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('servicios');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div style={{ fontFamily: '"Barlow Condensed", sans-serif' }}>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -107,7 +115,7 @@ const Home = () => {
             </li>
             <li>
               <a 
-                href="#sobre" 
+                href="/sobre" 
                 style={{ 
                   color: '#002665', 
                   textDecoration: 'none', 
@@ -120,7 +128,7 @@ const Home = () => {
             </li>
             <li>
               <a 
-                href="#contacto" 
+                href="/contacto" 
                 style={{ 
                   color: '#002665', 
                   textDecoration: 'none', 
@@ -179,7 +187,7 @@ const Home = () => {
                 </li>
                 <li style={{ marginBottom: '15px' }}>
                   <a 
-                    href="#sobre" 
+                    href="/sobre" 
                     onClick={() => setMenuOpen(false)}
                     style={{ 
                       color: 'white', 
@@ -193,7 +201,7 @@ const Home = () => {
                 </li>
                 <li>
                   <a 
-                    href="#contacto" 
+                    href="/contacto" 
                     onClick={() => setMenuOpen(false)}
                     style={{ 
                       color: 'white', 
@@ -228,8 +236,15 @@ const Home = () => {
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>EXPORTACIÓN E IMPORTACIÓN</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestros servicios comerciales incluyen la compra y venta de materiales, equipos y suministros.</p>
-                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: "none" }}>
                   Solicitar presupuesto
+                </button>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
                 </button>
               </div>
             </div>
@@ -245,6 +260,13 @@ const Home = () => {
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
               </div>
             </div>
           </div>
@@ -259,6 +281,13 @@ const Home = () => {
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
               </div>
             </div>
           </div>
@@ -272,6 +301,13 @@ const Home = () => {
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Limpieza profesional y mantenimiento de instalaciones empresariales.</p>
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
+                </button>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
                 </button>
               </div>
             </div>
@@ -289,233 +325,249 @@ const Home = () => {
       </div>
 
       {/* Sección de servicios con iconos */}
-      <div className="container my-5 py-4">
+      <div id="servicios" className="container my-5 py-4">
         <h2 className="text-center mb-5" style={{ color: '#002665', fontWeight: '700', fontSize: '2.5rem' }}>
           Nuestros Servicios
         </h2>
         <div className="row g-4">
           {/* Servicio 1 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <FaShip />
+            <a href="/exportacion-importacion" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <FaShip />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Exportación e Importación
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Gestión completa de procesos de comercio exterior con asesoría especializada
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Exportación e Importación
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Gestión completa de procesos de comercio exterior con asesoría especializada
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 2 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <GiBroom />
+            <a href="/servicios-integrales" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <GiBroom />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Servicios Integrales
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Limpieza profesional y mantenimiento de instalaciones empresariales
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Servicios Integrales
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Limpieza profesional y mantenimiento de instalaciones empresariales
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 3 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <LuConstruction />
+            <a href="/constructora" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <LuConstruction />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Constructora
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Proyectos de construcción y remodelación con equipos especializados
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Constructora
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Proyectos de construcción y remodelación con equipos especializados
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 4 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <FaTruckLoading />
+            <a href="/logistica" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <FaTruckLoading />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Logística
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Soluciones de transporte y distribución optimizadas para tu negocio
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Logística
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Soluciones de transporte y distribución optimizadas para tu negocio
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 5 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <MdShoppingBag />
+            <a href="/puestos-trabajo" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <MdShoppingBag />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Puestos de Trabajo
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Escritorios, sillas y equipos. Sin mover lo que no debemos, pero dejando todo limpio
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Puestos de Trabajo
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Escritorios, sillas y equipos. Sin mover lo que no debemos, pero dejando todo limpio
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 6 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <HiBuildingOffice />
+            <a href="/salas-reuniones" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <HiBuildingOffice />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Salas de Reuniones
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Cristales, mesas, pantallas y suelos. Todo listo para recibir visitas o equipos internos
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Salas de Reuniones
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Cristales, mesas, pantallas y suelos. Todo listo para recibir visitas o equipos internos
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 7 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <BsDoorOpenFill />
+            <a href="/zonas-comunes" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <BsDoorOpenFill />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Zonas Comunes y Pasillos
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Tráfico constante, polvo constante. Lo controlamos con rigor y frecuencia
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Zonas Comunes y Pasillos
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Tráfico constante, polvo constante. Lo controlamos con rigor y frecuencia
-              </p>
-            </div>
+            </a>
           </div>
 
           {/* Servicio 8 */}
           <div className="col-12 col-md-6 col-lg-3">
-            <div className="text-center p-3">
-              <div 
-                style={{ 
-                  width: '80px', 
-                  height: '80px', 
-                  backgroundColor: '#002665', 
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '40px',
-                  color: 'white'
-                }}
-              >
-                <GiCook />
+            <a href="/cocinas-comedores" style={{ textDecoration: 'none' }}>
+              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <GiCook />
+                </div>
+                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Cocinas y Comedores
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Limpieza diaria, revisión de residuos, encimeras y electrodomésticos. Sin olores ni manchas
+                </p>
               </div>
-              <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                Cocinas y Comedores
-              </h5>
-              <p style={{ color: '#666', fontSize: '14px' }}>
-                Limpieza diaria, revisión de residuos, encimeras y electrodomésticos. Sin olores ni manchas
-              </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
