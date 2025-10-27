@@ -89,7 +89,7 @@ const Home = () => {
           >
             <li>
               <a 
-                href="#inicio" 
+                href="/" 
                 style={{ 
                   color: '#002665', 
                   textDecoration: 'none', 
