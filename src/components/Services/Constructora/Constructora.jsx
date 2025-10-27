@@ -4,7 +4,6 @@ import ConstructoraHero from './maq.png';
 import InicioLogo from './inicio.jpg'; 
 
 import { GiBrickWall, GiCrane, GiArchitectMask } from "react-icons/gi"; // GiArchitectMask corregido
-import { HiOutlineLightBulb } from "react-icons/hi2";
 import { FaHardHat, FaTools } from "react-icons/fa";
 
 const Constructora = () => {

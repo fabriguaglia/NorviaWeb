@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LogisticaHero from './logi.png'; 
 import InicioLogo from './inicio.jpg'; 
 
-import { FaTruck, FaWarehouse, FaShippingFast, FaGlobe, FaRoute, FaBoxOpen } from "react-icons/fa";
+import { FaTruck, FaWarehouse, FaShippingFast, FaRoute, FaBoxOpen } from "react-icons/fa";
 
 const Logistica = () => {
   const [menuOpen, setMenuOpen] = useState(false);

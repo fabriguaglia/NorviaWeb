@@ -4,7 +4,6 @@ import exportacionHero from './exportacionHero.jpg';
 import InicioLogo from './inicio.jpg'; 
 
 import { FaShip, FaPlane, FaTruckMoving, FaRegFileAlt } from "react-icons/fa";
-import { HiOutlineLightBulb } from "react-icons/hi";
 import { GiGears } from "react-icons/gi";
 
 const Exportacionimpo = () => {

@@ -10,10 +10,6 @@ import { GiBroom } from "react-icons/gi";
 import { FaShip } from "react-icons/fa6";
 import { LuConstruction } from "react-icons/lu";
 import { FaTruckLoading } from "react-icons/fa";
-import { MdShoppingBag } from "react-icons/md";
-import { HiBuildingOffice } from "react-icons/hi2";
-import { BsDoorOpenFill } from "react-icons/bs";
-import { GiCook } from "react-icons/gi";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -331,17 +327,151 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      {/* --- SECCIÓN QUIÉNES SOMOS --- */}
+      <div id="quienes-somos" className="container my-4 py-5" style={{ backgroundColor: '#e9f5fb', borderRadius: '8px' }}>
+        <div className="row justify-content-center">
+          <div className="col-lg-10">
+            <h2 className="text-center mb-5" style={{ color: '#002665', fontWeight: '800', fontSize: '2.5rem' }}>
+              Quiénes Somos
+            </h2>
+            <p className="lead text-center mb-5" style={{ color: '#666', maxWidth: '850px', margin: '0 auto', fontSize: '1.4rem' }}>
+              Somos <strong style={{color:"#002665"}}>Grupo Norvia</strong>, una empresa de servicios integrales con <strong style={{color:"#002665"}}>raíces en Salta, Argentina</strong>, pero con una visión y <strong style={{color:"#002665"}}>alcance global</strong>. Nacimos con el propósito de ser el socio estratégico de negocios que combina la <strong style={{color:"#002665"}}>eficiencia operativa</strong> con la <strong style={{color:"#002665"}}>excelencia en el servicio</strong>.
+            </p>
+            
+            <div className="row g-4 text-center">
+              {/* Pilar 1: Misión */}
+              <div className="col-md-4">
+                <div 
+                  className="p-4 h-100" 
+                  style={{ 
+                    backgroundColor: '#f8f9fa', 
+                    borderRadius: '8px', 
+                    borderBottom: '5px solid #4fabc4',
+                    transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px)';
+                    e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)'; // Sombra basada en el color primario
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <h4 style={{ color: '#002665', fontWeight: '700', marginBottom: '15px' }}>Misión</h4>
+                  <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                    Ofrecer soluciones innovadoras en <strong>Logística, Construcción y Comercio Exterior</strong>, superando consistentemente las expectativas de nuestros clientes.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Pilar 2: Visión */}
+              <div className="col-md-4">
+                <div 
+                  className="p-4 h-100" 
+                  style={{ 
+                    backgroundColor: '#f8f9fa', 
+                    borderRadius: '8px', 
+                    borderBottom: '5px solid #4fabc4',
+                    transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px)';
+                    e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <h4 style={{ color: '#002665', fontWeight: '700', marginBottom: '15px' }}>Visión</h4>
+                  <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                    Consolidarnos como el grupo de servicios líder en el Norte de Argentina, reconocido por nuestro <strong>compromiso ético</strong> y <strong>calidad global</strong>.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Pilar 3: Valores */}
+              <div className="col-md-4">
+                <div 
+                  className="p-4 h-100" 
+                  style={{ 
+                    backgroundColor: '#f8f9fa', 
+                    borderRadius: '8px', 
+                    borderBottom: '5px solid #4fabc4',
+                    transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px)';
+                    e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <h4 style={{ color: '#002665', fontWeight: '700', marginBottom: '15px' }}>Valores</h4>
+                  <p style={{ color: '#666', fontSize: '1.1rem' }}>
+                    Nuestra base es la <strong>integridad</strong>, la <strong>innovación</strong> y la <strong>responsabilidad</strong> con cada cliente y proyecto.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-5">
+              <a 
+                href="/sobre"
+                className="btn btn-lg" 
+                style={{ 
+                  backgroundColor: '#002665', 
+                  color: 'white', 
+                  padding: '15px 40px', 
+                  fontSize: '1.2rem', 
+                  border: 'none', 
+                  fontWeight: '600',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  transition: 'transform 0.3s ease-in-out' // Transición para el botón
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                Conoce más sobre nosotros
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* --- FIN SECCIÓN QUIÉNES SOMOS --- */}
 
-      {/* Sección de servicios con iconos */}
-      <div id="servicios" className="container my-5 py-4">
+      {/* Sección de servicios con iconos y Hover */}
+      {/* Sección de servicios con iconos y línea azul inferior */}
+      <div id="servicios" className="container my-4 py-4">
         <h2 className="text-center mb-5" style={{ color: '#002665', fontWeight: '700', fontSize: '2.5rem' }}>
           Nuestros Servicios
         </h2>
         <div className="row g-4">
-          {/* Servicio 1 */}
+          {/* Servicio 1: Exportación e Importación */}
           <div className="col-12 col-md-6 col-lg-3">
             <a href="/exportacion-importacion" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
                 <div 
                   style={{ 
                     width: '80px', 
@@ -356,7 +486,8 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  <FaShip />
+                  {/* Asegúrate de importar FaShip */}
+                  <FaShip /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Exportación e Importación
@@ -368,10 +499,27 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Servicio 2 */}
+          {/* Servicio 2: Servicios Integrales (Limpieza) */}
           <div className="col-12 col-md-6 col-lg-3">
             <a href="/servicios-integrales" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
                 <div 
                   style={{ 
                     width: '80px', 
@@ -386,7 +534,8 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  <GiBroom />
+                  {/* Asegúrate de importar GiBroom */}
+                  <GiBroom /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Servicios Integrales
@@ -398,10 +547,27 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Servicio 3 */}
+          {/* Servicio 3: Constructora */}
           <div className="col-12 col-md-6 col-lg-3">
             <a href="/constructora" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
                 <div 
                   style={{ 
                     width: '80px', 
@@ -416,7 +582,8 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  <LuConstruction />
+                  {/* Asegúrate de importar LuConstruction */}
+                  <LuConstruction /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Constructora
@@ -428,10 +595,27 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Servicio 4 */}
+          {/* Servicio 4: Logística */}
           <div className="col-12 col-md-6 col-lg-3">
             <a href="/logistica" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
                 <div 
                   style={{ 
                     width: '80px', 
@@ -446,7 +630,8 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  <FaTruckLoading />
+                  {/* Asegúrate de importar FaTruckLoading */}
+                  <FaTruckLoading /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Logística
@@ -457,7 +642,6 @@ const Home = () => {
               </div>
             </a>
           </div>
-
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Serviciosintegrales from './Serviciosintegrales.png'; 
 import InicioLogo from './inicio.jpg'; 
 
-import { GiBroom, GiVacuumCleaner, GiCook } from "react-icons/gi";
-import { HiBuildingOffice, HiOutlineLightBulb } from "react-icons/hi2";
+import { GiVacuumCleaner, GiCook } from "react-icons/gi";
+import { HiBuildingOffice } from "react-icons/hi2";
 import { BsDoorOpenFill } from "react-icons/bs";
 import { FaSprayCan } from "react-icons/fa6";
 
