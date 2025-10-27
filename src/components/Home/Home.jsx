@@ -102,7 +102,7 @@ const Home = () => {
             </li>
             <li>
               <a 
-                href="#servicios" 
+                href="/#servicios" 
                 style={{ 
                   color: '#002665', 
                   textDecoration: 'none', 
@@ -159,7 +159,7 @@ const Home = () => {
               <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
                 <li style={{ marginBottom: '15px' }}>
                   <a 
-                    href="#inicio" 
+                    href="/" 
                     onClick={() => setMenuOpen(false)}
                     style={{ 
                       color: 'white', 
@@ -173,7 +173,7 @@ const Home = () => {
                 </li>
                 <li style={{ marginBottom: '15px' }}>
                   <a 
-                    href="#servicios" 
+                    href="/#servicios" 
                     onClick={() => setMenuOpen(false)}
                     style={{ 
                       color: 'white', 
@@ -236,9 +236,11 @@ const Home = () => {
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>EXPORTACIÓN E IMPORTACIÓN</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestros servicios comerciales incluyen la compra y venta de materiales, equipos y suministros.</p>
-                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: "none" }}>
+                <a href="/contacto">
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
+                </a>
                 <button 
                   className="btn" 
                   style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
@@ -257,9 +259,11 @@ const Home = () => {
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>LOGÍSTICA</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Soluciones de transporte y distribución optimizadas para tu negocio.</p>
+                <a href="/contacto">
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
+                </a>
                 <button 
                   className="btn" 
                   style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
@@ -278,16 +282,18 @@ const Home = () => {
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>CONSTRUCCIÓN</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Proyectos de construcción y remodelación con equipos especializados.</p>
+                <a href="/contacto">
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
-                <button 
+                </a>
+                  <button 
                   className="btn" 
                   style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
                   onClick={scrollToServices}
-                >
+                  >
                   Más información
-                </button>
+                  </button>
               </div>
             </div>
           </div>
@@ -299,9 +305,11 @@ const Home = () => {
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
                 <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>SERVICIOS INTEGRALES</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Limpieza profesional y mantenimiento de instalaciones empresariales.</p>
+                <a href="/contacto">
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
                 </button>
+                </a>
                 <button 
                   className="btn" 
                   style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
@@ -350,7 +358,7 @@ const Home = () => {
                 >
                   <FaShip />
                 </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Exportación e Importación
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
@@ -380,7 +388,7 @@ const Home = () => {
                 >
                   <GiBroom />
                 </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Servicios Integrales
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
@@ -410,7 +418,7 @@ const Home = () => {
                 >
                   <LuConstruction />
                 </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Constructora
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
@@ -440,7 +448,7 @@ const Home = () => {
                 >
                   <FaTruckLoading />
                 </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Logística
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
@@ -450,125 +458,6 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Servicio 5 */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/puestos-trabajo" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
-                <div 
-                  style={{ 
-                    width: '80px', 
-                    height: '80px', 
-                    backgroundColor: '#002665', 
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '40px',
-                    color: 'white'
-                  }}
-                >
-                  <MdShoppingBag />
-                </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Puestos de Trabajo
-                </h5>
-                <p style={{ color: '#666', fontSize: '14px' }}>
-                  Escritorios, sillas y equipos. Sin mover lo que no debemos, pero dejando todo limpio
-                </p>
-              </div>
-            </a>
-          </div>
-
-          {/* Servicio 6 */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/salas-reuniones" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
-                <div 
-                  style={{ 
-                    width: '80px', 
-                    height: '80px', 
-                    backgroundColor: '#002665', 
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '40px',
-                    color: 'white'
-                  }}
-                >
-                  <HiBuildingOffice />
-                </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Salas de Reuniones
-                </h5>
-                <p style={{ color: '#666', fontSize: '14px' }}>
-                  Cristales, mesas, pantallas y suelos. Todo listo para recibir visitas o equipos internos
-                </p>
-              </div>
-            </a>
-          </div>
-
-          {/* Servicio 7 */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/zonas-comunes" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
-                <div 
-                  style={{ 
-                    width: '80px', 
-                    height: '80px', 
-                    backgroundColor: '#002665', 
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '40px',
-                    color: 'white'
-                  }}
-                >
-                  <BsDoorOpenFill />
-                </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Zonas Comunes y Pasillos
-                </h5>
-                <p style={{ color: '#666', fontSize: '14px' }}>
-                  Tráfico constante, polvo constante. Lo controlamos con rigor y frecuencia
-                </p>
-              </div>
-            </a>
-          </div>
-
-          {/* Servicio 8 */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/cocinas-comedores" style={{ textDecoration: 'none' }}>
-              <div className="text-center p-3" style={{backgroundColor: '#f8f9fa', borderRadius: '8px', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
-                <div 
-                  style={{ 
-                    width: '80px', 
-                    height: '80px', 
-                    backgroundColor: '#002665', 
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '40px',
-                    color: 'white'
-                  }}
-                >
-                  <GiCook />
-                </div>
-                <h5 style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Cocinas y Comedores
-                </h5>
-                <p style={{ color: '#666', fontSize: '14px' }}>
-                  Limpieza diaria, revisión de residuos, encimeras y electrodomésticos. Sin olores ni manchas
-                </p>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
     </div>

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InicioLogo from './inicio.jpg';
-import { RxStarFilled } from "react-icons/rx";
-import { FaHandshake } from "react-icons/fa";
-
 
 const SobreNosotros = () => {
   const [menuOpen, setMenuOpen] = useState(false);
