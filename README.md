@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Grupo Norvia: Servicios Integrales
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo de Grupo Norvia](./inicio.jpg)
+---
 
-## Available Scripts
+## 1. Perfil Corporativo de Grupo Norvia
 
-In the project directory, you can run:
+**Grupo Norvia** es una empresa consolidada que ofrece un portafolio dual de servicios especializados, actuando como un socio estratégico integral para el desarrollo de proyectos de infraestructura y la optimización de la cadena de suministro. Nuestra misión es garantizar la máxima calidad y eficiencia en todos nuestros pilares de negocio.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. Pilares de Servicios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Grupo Norvia se enfoca en dos áreas críticas, asegurando la excelencia en la edificación y en la logística de sus clientes.
 
-### `npm test`
+### 🏗️ Constructora
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Proyectos de Ingeniería, Edificación y Remodelación. Desde la cimentación hasta la entrega final, garantizamos calidad, cumplimiento de plazos y máxima seguridad en cada etapa de obras residenciales, comerciales e industriales.
 
-### `npm run build`
+| Servicio Destacado | Descripción |
+| :--- | :--- |
+| **Obra Nueva y Edificación** | Gestión integral de proyectos de construcción, incluyendo diseño arquitectónico, licencias y ejecución de obra civil. |
+| **Remodelaciones y Adecuaciones** | Modernización y rehabilitación de espacios existentes, maximizando la funcionalidad y el valor estético de su propiedad. |
+| **Ingeniería Civil y Estructural** | Cálculos y ejecución de estructuras sólidas, garantizando la durabilidad y resistencia del proyecto. |
+| **Gestión y Supervisión** | Control de calidad, gestión de personal y manejo de proveedores para asegurar la entrega en tiempo. |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **CTA Principal:** ¡Da Vida a tu Próximo Proyecto de Construcción!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🚛 Logística y Transporte
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Soluciones eficientes para la Cadena de Suministro. Optimizamos el flujo de mercancías, ofreciendo seguridad y eficiencia en transporte, almacenamiento y distribución a nivel nacional e internacional.
 
-### `npm run eject`
+| Servicio Destacado | Descripción |
+| :--- | :--- |
+| **Transporte (FTL, LTL, Multimodal)** | Servicios de carga terrestre, marítima y aérea, asegurando la entrega puntual y el manejo especializado. |
+| **Almacenamiento y Distribución** | Centros de distribución con gestión de inventarios (WMS) y preparación de pedidos (picking). |
+| **Rastreo y Trazabilidad** | Monitoreo en tiempo real de su envío, desde la recogida hasta la entrega, con reportes detallados. |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> **CTA Principal:** ¡Potencia tu Cadena de Suministro con Soluciones Logísticas!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 3. Implementación y Aspectos Técnicos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Las páginas de aterrizaje de ambos servicios (Constructora y Logística) fueron desarrolladas como componentes funcionales para garantizar una interfaz moderna, rápida y adaptable.
 
-## Learn More
+### Tecnologías Utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **Frontend Principal:** **React** (Componentes Funcionales)
+* **Estilizado y Responsive Design:** **Bootstrap 5**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Diseño y Coherencia Visual
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* **Paleta de Colores:** Se define una paleta base para la marca:
+    * **Primario:** `#002665` (Azul Oscuro/Navy)
+    * **Secundario/Énfasis:** `#4fabc4` (Azul Claro/Cian)
