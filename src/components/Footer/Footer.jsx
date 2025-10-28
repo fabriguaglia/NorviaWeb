@@ -9,11 +9,13 @@ const Footer = () => {
         <div className="row align-items-center">
           {/* Logo */}
           <div className="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
-            <img 
+            <a href="/">
+              <img 
               src={Logo} 
               alt="Logo" 
               style={{ maxWidth: '150px', height: 'auto' }}
-            />
+              />
+            </a>
           </div>
 
           {/* Links de navegación */}
@@ -32,7 +34,7 @@ const Footer = () => {
             >
               <li>
                 <a 
-                  href="#inicio" 
+                  href="/" 
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none', 
@@ -45,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#servicios" 
+                  href="/#servicios" 
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none', 
@@ -58,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#sobre" 
+                  href="/sobre" 
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none', 
@@ -71,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="#contacto" 
+                  href="/contacto" 
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none', 

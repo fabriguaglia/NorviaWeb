@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InicioLogo from './inicio.jpg';
-import barco from './barco.png';
 import limp from './limp.png';
 import maq from './maq.png';
 import camion from './camion.png';
+import comercial from './comercial.png';
+import mantenimiento from './mantenimiento.jpg';
+import metal from './metal.png';
 
 import { GiBroom } from "react-icons/gi";
 import { FaShip } from "react-icons/fa6";
 import { LuConstruction } from "react-icons/lu";
 import { FaTruckLoading } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
+import { GiMetalBar } from "react-icons/gi";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -216,21 +220,170 @@ const Home = () => {
       </div>
 
       {/* Carrusel de servicios */}
-      <div id="servicesCarousel" className="carousel slide" data-bs-ride="carousel">
+      <div id="servicesCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         
         <div className="carousel-inner">
-          {/* Slide 1 */}
+          {/* Slide 1 - Limpieza */}
           <div className="carousel-item active">
-            <img src={barco} className="d-block w-100" alt="Comercial" style={{ height: '600px', objectFit: 'cover' }} />
+            <div style={{ position: 'relative' }}>
+              <img src={limp} className="d-block w-100" alt="Limpieza" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
+            </div>
             <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
-                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>EXPORTACIÓN E IMPORTACIÓN</h3>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>LIMPIEZA</h3>
+                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestros servicios de limpieza están diseñados para mantener la higiene y la seguridad en diferentes entornos.</p>
+                <a href="/contacto">
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
+                  Solicitar presupuesto
+                </button>
+                </a>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 2 - Mantenimiento Industrial */}
+          <div className="carousel-item">
+            <div style={{ position: 'relative' }}>
+              <img src={mantenimiento} className="d-block w-100" alt="Mantenimiento Industrial" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
+            </div>
+            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
+              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>MANTENIMIENTO INDUSTRIAL</h3>
+                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Ofrecemos servicios de mantenimiento preventivo y correctivo para equipos y maquinaria industrial.</p>
+                <a href="/contacto">
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
+                  Solicitar presupuesto
+                </button>
+                </a>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 3 - Metalúrgica */}
+          <div className="carousel-item">
+            <div style={{ position: 'relative' }}>
+              <img src={metal} className="d-block w-100" alt="Metalúrgica" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
+            </div>
+            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
+              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>METALÚRGICA</h3>
+                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Ofrecemos servicios de fabricación y tratamiento de metales.</p>
+                <a href="/contacto">
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
+                  Solicitar presupuesto
+                </button>
+                </a>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 4 - Logística */}
+          <div className="carousel-item">
+            <div style={{ position: 'relative' }}>
+              <img src={camion} className="d-block w-100" alt="Logística" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
+            </div>
+            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
+              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>LOGÍSTICA</h3>
+                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestra división de logística se encarga de la gestión de la cadena de suministro.</p>
+                <a href="/contacto">
+                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
+                  Solicitar presupuesto
+                </button>
+                </a>
+                <button 
+                  className="btn" 
+                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
+                  onClick={scrollToServices}
+                >
+                  Más información
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 5 - Comercial */}
+          <div className="carousel-item">
+            <div style={{ position: 'relative' }}>
+              <img src={comercial} className="d-block w-100" alt="Comercial" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
+            </div>
+            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
+              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>COMERCIAL</h3>
                 <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestros servicios comerciales incluyen la compra y venta de materiales, equipos y suministros.</p>
                 <a href="/contacto">
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
@@ -248,59 +401,24 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Slide 2 */}
+          {/* Slide 6 - Constructora */}
           <div className="carousel-item">
-            <img src={camion} className="d-block w-100" alt="Logística" style={{ height: '600px', objectFit: 'cover' }} />
-            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
-              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
-                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>LOGÍSTICA</h3>
-                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Soluciones de transporte y distribución optimizadas para tu negocio.</p>
-                <a href="/contacto">
-                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
-                  Solicitar presupuesto
-                </button>
-                </a>
-                <button 
-                  className="btn" 
-                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
-                  onClick={scrollToServices}
-                >
-                  Más información
-                </button>
-              </div>
+            <div style={{ position: 'relative' }}>
+              <img src={maq} className="d-block w-100" alt="Constructora" style={{ height: '600px', objectFit: 'cover' }} />
+              <div style={{ 
+                position: 'absolute', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                backgroundColor: 'rgba(0, 38, 101, 0.5)',
+                pointerEvents: 'none'
+              }}></div>
             </div>
-          </div>
-
-          {/* Slide 3 */}
-          <div className="carousel-item">
-            <img src={maq} className="d-block w-100" alt="Construcción" style={{ height: '600px', objectFit: 'cover' }} />
             <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
               <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
-                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>CONSTRUCCIÓN</h3>
-                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Proyectos de construcción y remodelación con equipos especializados.</p>
-                <a href="/contacto">
-                <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
-                  Solicitar presupuesto
-                </button>
-                </a>
-                  <button 
-                  className="btn" 
-                  style={{ backgroundColor: '#4fabc4', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none', marginLeft: '15px' }}
-                  onClick={scrollToServices}
-                  >
-                  Más información
-                  </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Slide 4 */}
-          <div className="carousel-item">
-            <img src={limp} className="d-block w-100" alt="Servicios Integrales" style={{ height: '600px', objectFit: 'cover' }} />
-            <div className="carousel-caption d-flex align-items-center" style={{ left: '5%', right: 'auto', textAlign: 'left', top: '50%', transform: 'translateY(-50%)', bottom: 'auto' }}>
-              <div style={{ backgroundColor: 'rgba(128, 128, 128, 0.8)', padding: '30px 40px', borderRadius: '8px', maxWidth: '500px' }}>
-                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>SERVICIOS INTEGRALES</h3>
-                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Limpieza profesional y mantenimiento de instalaciones empresariales.</p>
+                <h3 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '15px' }}>CONSTRUCTORA</h3>
+                <p style={{ fontSize: '1.2rem', marginBottom: '25px' }}>Nuestra división de construcción se enfoca en la ejecución de proyectos de obra civil y edificaciones.</p>
                 <a href="/contacto">
                 <button className="btn" style={{ backgroundColor: '#002665', color: 'white', padding: '12px 30px', fontSize: '1.1rem', border: 'none' }}>
                   Solicitar presupuesto
@@ -327,6 +445,7 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
       {/* --- SECCIÓN QUIÉNES SOMOS --- */}
       <div id="quienes-somos" className="container my-4 py-5" style={{ backgroundColor: '#e9f5fb', borderRadius: '8px' }}>
         <div className="row justify-content-center">
@@ -444,22 +563,21 @@ const Home = () => {
       </div>
       {/* --- FIN SECCIÓN QUIÉNES SOMOS --- */}
 
-      {/* Sección de servicios con iconos y Hover */}
-      {/* Sección de servicios con iconos y línea azul inferior */}
+      {/* Sección de Servicios */}
       <div id="servicios" className="container my-4 py-4">
         <h2 className="text-center mb-5" style={{ color: '#002665', fontWeight: '700', fontSize: '2.5rem' }}>
           Nuestros Servicios
         </h2>
         <div className="row g-4">
-          {/* Servicio 1: Exportación e Importación */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/exportacion-importacion" style={{ textDecoration: 'none' }}>
+          {/* Servicio 1: Limpieza */}
+          <div className="col-12 col-md-6 col-lg-4">
+            <a href="/limpieza" style={{ textDecoration: 'none' }}>
               <div 
                 className="text-center p-3 h-100" 
                 style={{
                   backgroundColor: '#f8f9fa', 
                   borderRadius: '8px', 
-                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  borderBottom: '5px solid #4fabc4',
                   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
                   cursor: 'pointer'
                 }}
@@ -486,76 +604,27 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  {/* Asegúrate de importar FaShip */}
-                  <FaShip /> 
-                </div>
-                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Exportación e Importación
-                </h5>
-                <p style={{ color: '#666', fontSize: '14px' }}>
-                  Gestión completa de procesos de comercio exterior con asesoría especializada
-                </p>
-              </div>
-            </a>
-          </div>
-
-          {/* Servicio 2: Servicios Integrales (Limpieza) */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/servicios-integrales" style={{ textDecoration: 'none' }}>
-              <div 
-                className="text-center p-3 h-100" 
-                style={{
-                  backgroundColor: '#f8f9fa', 
-                  borderRadius: '8px', 
-                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
-                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-10px)';
-                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                <div 
-                  style={{ 
-                    width: '80px', 
-                    height: '80px', 
-                    backgroundColor: '#002665', 
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '40px',
-                    color: 'white'
-                  }}
-                >
-                  {/* Asegúrate de importar GiBroom */}
                   <GiBroom /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Servicios Integrales
+                  Limpieza
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
-                  Limpieza profesional y mantenimiento de instalaciones empresariales
+                  Servicios profesionales de limpieza para todo tipo de instalaciones
                 </p>
               </div>
             </a>
           </div>
 
-          {/* Servicio 3: Constructora */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <a href="/constructora" style={{ textDecoration: 'none' }}>
+          {/* Servicio 2: Mantenimiento Industrial */}
+          <div className="col-12 col-md-6 col-lg-4">
+            <a href="/mantenimiento-industrial" style={{ textDecoration: 'none' }}>
               <div 
                 className="text-center p-3 h-100" 
                 style={{
                   backgroundColor: '#f8f9fa', 
                   borderRadius: '8px', 
-                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  borderBottom: '5px solid #4fabc4',
                   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
                   cursor: 'pointer'
                 }}
@@ -582,28 +651,74 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  {/* Asegúrate de importar LuConstruction */}
-                  <LuConstruction /> 
+                  <FaTools /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
-                  Constructora
+                  Mantenimiento Industrial
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
-                  Proyectos de construcción y remodelación con equipos especializados
+                  Mantenimiento preventivo y correctivo de equipos e instalaciones
+                </p>
+              </div>
+            </a>
+          </div>
+
+          {/* Servicio 3: Metalúrgica */}
+          <div className="col-12 col-md-6 col-lg-4">
+            <a href="/metalurgica" style={{ textDecoration: 'none' }}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4',
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <GiMetalBar /> 
+                </div>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Metalúrgica
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Fabricación y trabajos en metal con alta calidad y precisión
                 </p>
               </div>
             </a>
           </div>
 
           {/* Servicio 4: Logística */}
-          <div className="col-12 col-md-6 col-lg-3">
+          <div className="col-12 col-md-6 col-lg-4">
             <a href="/logistica" style={{ textDecoration: 'none' }}>
               <div 
                 className="text-center p-3 h-100" 
                 style={{
                   backgroundColor: '#f8f9fa', 
                   borderRadius: '8px', 
-                  borderBottom: '5px solid #4fabc4', // ESTILO AÑADIDO
+                  borderBottom: '5px solid #4fabc4',
                   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
                   cursor: 'pointer'
                 }}
@@ -630,14 +745,107 @@ const Home = () => {
                     color: 'white'
                   }}
                 >
-                  {/* Asegúrate de importar FaTruckLoading */}
                   <FaTruckLoading /> 
                 </div>
                 <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
                   Logística
                 </h5>
                 <p style={{ color: '#666', fontSize: '14px' }}>
-                  Soluciones de transporte y distribución optimizadas para tu negocio
+                  Soluciones de transporte y distribución optimizadas
+                </p>
+              </div>
+            </a>
+          </div>
+
+          {/* Servicio 5: Comercial */}
+          <div className="col-12 col-md-6 col-lg-4">
+            <a href="/comercial" style={{ textDecoration: 'none' }}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4',
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <FaShip /> 
+                </div>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Comercial
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Importación y exportación con alcance global
+                </p>
+              </div>
+            </a>
+          </div>
+
+          {/* Servicio 6: Constructora */}
+          <div className="col-12 col-md-6 col-lg-4">
+            <a href="/constructora" style={{ textDecoration: 'none' }}>
+              <div 
+                className="text-center p-3 h-100" 
+                style={{
+                  backgroundColor: '#f8f9fa', 
+                  borderRadius: '8px', 
+                  borderBottom: '5px solid #4fabc4',
+                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 38, 101, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div 
+                  style={{ 
+                    width: '80px', 
+                    height: '80px', 
+                    backgroundColor: '#002665', 
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '40px',
+                    color: 'white'
+                  }}
+                >
+                  <LuConstruction /> 
+                </div>
+                <h5 className="text-decoration-underline" style={{ color: '#002665', fontWeight: '600', marginBottom: '15px' }}>
+                  Constructora
+                </h5>
+                <p style={{ color: '#666', fontSize: '14px' }}>
+                  Proyectos de construcción con equipos especializados
                 </p>
               </div>
             </a>
