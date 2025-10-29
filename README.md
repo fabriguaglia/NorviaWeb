@@ -1,6 +1,6 @@
 # Grupo Norvia: Servicios Integrales
 
-![Logo de Grupo Norvia](./inicio.png)
+![Logo de Grupo Norvia](inicio.png)
 ---
 
 ## 1. Perfil Corporativo de Grupo Norvia
