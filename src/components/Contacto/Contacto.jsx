@@ -253,7 +253,7 @@ const Contacto = () => {
                       fontWeight: '500'
                     }}
                   >
-                    +54 387 545-0918
+                    +54 9 3875 45-0918
                   </span>
                 </div>
               </div>
@@ -304,7 +304,7 @@ const Contacto = () => {
                       fontWeight: '500'
                     }}
                   >
-                    +54 387 545-0918
+                    +54 9 3875 45-0918
                   </span>
                 </div>
               </div>
