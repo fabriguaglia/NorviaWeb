@@ -304,7 +304,7 @@ const Contacto = () => {
                       fontWeight: '500'
                     }}
                   >
-                    +54 9 11 2345-6789
+                    +54 387 545-0918
                   </span>
                 </div>
               </div>
