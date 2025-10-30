@@ -210,7 +210,7 @@ const Contacto = () => {
               {/* WhatsApp */}
               <div className="col-12 col-md-6">
                 <div 
-                  onClick={() => window.open('https://wa.me/5491234567890', '_blank')}
+                  onClick={() => window.open('https://wa.me/543875450918', '_blank')}
                   style={{ 
                   padding: '30px', 
                   backgroundColor: '#f8f9fa', 
@@ -253,7 +253,7 @@ const Contacto = () => {
                       fontWeight: '500'
                     }}
                   >
-                    +54 9 11 2345-6789
+                    +54 387 545-0918
                   </span>
                 </div>
               </div>
@@ -261,7 +261,7 @@ const Contacto = () => {
               {/* Teléfono */}
               <div className="col-12 col-md-6">
                 <div 
-                  onClick={() => window.location.href = 'tel:+5491234567890'}
+                  onClick={() => window.location.href = 'tel:+543875450918'}
                   style={{ 
                   padding: '30px', 
                   backgroundColor: '#f8f9fa', 
